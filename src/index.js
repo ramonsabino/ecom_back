@@ -1,17 +1,21 @@
 const express = require('express');
+const cors = require('cors');
 const app = express();
-const PORT = process.env.PORT || 3001;
 
-// Importar rotas
+// Permitir todas as origens
+app.use(cors());
+
+// ou especificar origens permitidas
+// app.use(cors({ origin: 'http://localhost:3000' }));
+
+// Importe as rotas
 const routes = require('./routes/routes');
 
-// Middleware para processar JSON
-app.use(express.json());
-
-// Usar as rotas
+// Use as rotas
 app.use('/api', routes);
 
 // Iniciar o servidor
+const PORT = process.env.PORT || 3001;
 app.listen(PORT, () => {
-    console.log(`Servidor iniciado na porta ${PORT}`);
+  console.log(`Servidor rodando na porta ${PORT}`);
 });
