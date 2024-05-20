@@ -1,0 +1,21 @@
+{
+  "name": "lr_dba",
+  "version": "1.0.0",
+  "description": "LR CASES E ACESSORIOS",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon src/index.js"
+  },
+  "keywords": [
+    "Node.js",
+    "SQLite"
+  ],
+  "author": "Seu Nome",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1",
+    "nodemon": "^3.1.0",
+    "sequelize": "^6.6.2",
+    "sqlite3": "^5.0.2"
+  }
+}
